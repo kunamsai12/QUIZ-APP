@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Quiz</title>
+    <link rel="stylesheet" href="quiz_css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Programming Quiz</h1>
+        <!-- Language Selection Section -->
+        <div id="languageSelection">
+            <h3>Select a Language</h3>
+            <button onclick="startQuiz('C')">C</button>
+            <button onclick="startQuiz('Python')">Python</button>
+            <button onclick="startQuiz('JavaScript')">JavaScript</button>
+            <button onclick="startQuiz('HTML')">HTML</button>
+            <button onclick="startQuiz('CSS')">CSS</button>
+        </div>
+        <!-- Quiz Section -->
+        <div id="quizSection" class="hidden">
+            <div class="timer">Time Left: <span id="timer">30</span> seconds</div>
+            <div id="question" class="question"></div>
+            <div id="options" class="options"></div>
+            <button id="submitBtn" class="hidden" onclick="submitQuiz()">Submit</button>
+        </div>
+        <!-- Result Section -->
+        <div id="resultSection" class="hidden">
+            <h2>Quiz Results</h2>
+            <p>Correct Answers: <span id="correctCount">0</span></p>
+            <p>Wrong Answers: <span id="wrongCount">0</span></p>
+            <h3>Feedback</h3>
+            <label>How was the test?</label>
+            <select id="feedback">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+    </div>
+    <script src="quiz_js.js"></script>
+</body>
+</html>
